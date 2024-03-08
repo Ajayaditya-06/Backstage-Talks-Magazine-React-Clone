@@ -1,1 +1,1 @@
-# Backstage-Talks-Magazine-React-Clone
+# Backstage Talks Magazine React Clone
