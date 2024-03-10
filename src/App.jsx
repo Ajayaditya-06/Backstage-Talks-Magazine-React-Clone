@@ -36,7 +36,6 @@ export default function App() {
     }
   };
   const scrollHandler = (e) => {
-    console.log(e.target.scrollTop);
     if (e.target.scrollTop < window.innerHeight) {
       document.getElementById("issue").style.backgroundColor = "#FF608C";
       document.body.style.color = "#000";
@@ -61,7 +60,6 @@ export default function App() {
     }
   };
   useEffect(() => {
-    console.log(scrolly);
     minScrollHandler();
   }, [scrollY]);
   return (
@@ -69,6 +67,79 @@ export default function App() {
       className="flex flex-col lg:snap-y lg:snap-mandatory lg:h-screen w-full  overflow-y-scroll "
       onScroll={scrollHandler}
     >
+      {" "}
+      <div className="hidden text-[#222] fixed bottom-0 right-0 font-medium mx-3 my-5  lg:flex text-base space-y-1 flex-col">
+        <button
+          className="p-0 flex m-0 hover:underline text-base/5 font-normal border-0 bg-transparent"
+          onClick={() => {
+            document
+              .getElementById("issue7")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <div>Issue #7</div>
+        </button>
+        <button
+          className="p-0 flex m-0 hover:underline text-base/5 font-normal border-0 bg-transparent"
+          onClick={() => {
+            document
+              .getElementById("issue6")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <div>Issue #6</div>
+        </button>
+        <button
+          className="p-0 flex m-0 hover:underline text-base/5 font-normal border-0 bg-transparent"
+          onClick={() => {
+            document
+              .getElementById("issue5")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <div>Issue #5</div>
+        </button>{" "}
+        <button
+          className="p-0 flex m-0 hover:underline text-base/5 font-normal border-0 bg-transparent"
+          onClick={() => {
+            document
+              .getElementById("issue4")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <div>Issue #4</div>
+        </button>{" "}
+        <button
+          className="p-0 flex m-0 hover:underline text-base/5 font-normal border-0 bg-transparent"
+          onClick={() => {
+            document
+              .getElementById("issue3")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <div>Issue #3</div>
+        </button>{" "}
+        <button
+          className="p-0 flex m-0 hover:underline text-base/5 font-normal border-0 bg-transparent"
+          onClick={() => {
+            document
+              .getElementById("issue2")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <div>Issue #2</div>
+        </button>{" "}
+        <button
+          className="p-0 flex m-0 hover:underline text-base/5 font-normal border-0 bg-transparent"
+          onClick={() => {
+            document
+              .getElementById("issue1")
+              .scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <div>Issue #1</div>
+        </button>{" "}
+      </div>
       <section
         className="fixed top-0 w-screen h-screen -z-30 right-0 bg-white text-black"
         id="issue"
@@ -97,27 +168,19 @@ export default function App() {
       <div id="issue1" className="snap-start shrink-0 w-full h-screen">
         <Issue1 />
       </div>
-      <div className="bg-transparent lg:hidden text-black w-screen px-5 py-5 flex flex-row justify-between">
-        <div className="flex lg:basis-1/3 flex-col justify-between">
-          <div className="flex w-[240px] flex-col">
-            <div className="text-base font-semibold  tracking-tighter">
-              Backstage Talks is a magazine of casual, but in depth dialogues on
-              design and business. Our decisions shape and influence this
-              complex world—to have a chance to make the right ones, we need to
-              talk.{" "}
-            </div>
-            <div className="text-xs mt-2 mb-5">
-              © 2024 Published by Büro Milk
-            </div>
-            <div className="text-base font-semibold">Privacy Policy</div>
-          </div>
+      <div className="bg-transparent lg:hidden text-[#222]   w-screen px-5 py-5 flex flex-col text-center justify-center">
+        <div className="text-base font-bold  leading-snug tracking-tighter">
+          Backstage Talks is a magazine of casual, but in depth dialogues on
+          design and business. Our decisions shape and influence this complex
+          world—to have a chance to make the right ones, we need to talk.{" "}
         </div>
-        <div className="basis-1/3"></div>
-        <div className="flex basis-1/3 flex-col text-right justify-end">
-          <div className="text-base font-semibold tracking-tighter">
-            info@backstagetalks.com
-          </div>
-          <div></div>
+        <div className="text-[0.6rem] mt-2 mb-7">
+          © 2024{" "}
+          <span className="underline inline"> Published by Büro Milk</span>{" "}
+        </div>
+        <div className="text-sm font-semibold underline">Privacy Policy</div>
+        <div className="text-base mt-10 mb-5 font-semibold tracking-tighter">
+          info@backstagetalks.com
         </div>
       </div>
     </div>
